@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  11 FEB 2015 12:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 FEB 2015 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,8 +6,8 @@ entering extended mode
 (./assignment.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
-(./IEEEtran.cls
-Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
+(/usr/local/texlive/2013/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2012/12/27 V1.8 by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
 \@IEEEtrantmpdimenA=\dimen102
@@ -15,7 +15,7 @@ Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
 \@IEEEtrantmpcountA=\count79
 \@IEEEtrantmpcountB=\count80
 \@IEEEtrantmptoksA=\toks14
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 373.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 368.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -28,45 +28,45 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \CLASSINFOnormalsizeunitybaselineskip=\dimen106
 \IEEEnormaljot=\dimen107
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 731.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
 \IEEEilabelindentA=\dimen108
 \IEEEilabelindentB=\dimen109
 \IEEEilabelindent=\dimen110
@@ -87,8 +87,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \c@table=\count87
 \@IEEEeqnnumcols=\count88
 \@IEEEeqncolcnt=\count89
+\@IEEEsubeqnnumrollback=\count90
 \@IEEEtmpitemindent=\dimen116
-\c@IEEEbiography=\count90
+\c@IEEEbiography=\count91
 \@IEEEtranrubishbin=\box26
 ) (/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2013/05/16 v3.9f The Babel package
@@ -98,7 +99,7 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2013/05/16 v3.9f Babel common definitions
-\babel@savecnt=\count91
+\babel@savecnt=\count92
 \U@D=\dimen117
 )
 \l@canadian = a dialect from \language\l@american 
@@ -122,7 +123,7 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count92
+\Gread@gobject=\count93
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
@@ -169,23 +170,23 @@ Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfysize=\dimen123
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count93
+\lst@mode=\count94
 \lst@gtempboxa=\box27
 \lst@token=\toks18
-\lst@length=\count94
+\lst@length=\count95
 \lst@currlwidth=\dimen124
-\lst@column=\count95
-\lst@pos=\count96
+\lst@column=\count96
+\lst@pos=\count97
 \lst@lostspace=\dimen125
 \lst@width=\dimen126
-\lst@newlines=\count97
-\lst@lineno=\count98
+\lst@newlines=\count98
+\lst@lineno=\count99
 \lst@maxwidth=\dimen127
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count99
-\lst@skipnumbers=\count100
+\c@lstnumber=\count100
+\lst@skipnumbers=\count101
 \lst@framebox=\box28
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.cfg
@@ -254,7 +255,7 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count101
+\c@r@tfl@t=\count102
 \rotFPtop=\skip47
 \rotFPbot=\skip48
 \rot@float@box=\box29
@@ -262,7 +263,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count102
+\c@float@type=\count103
 \float@exts=\toks20
 \float@box=\box30
 \@float@everytoks=\toks21
@@ -296,7 +297,7 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \UL@skip=\skip49
 \UL@hook=\toks26
 \UL@height=\dimen131
-\UL@pe=\count103
+\UL@pe=\count104
 \UL@pixel=\dimen132
 \ULC@box=\box36
 Package: ulem 2012/05/18
@@ -305,6 +306,23 @@ Package: ulem 2012/05/18
 (/usr/local/texlive/2013/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2013/03/22 v0.18.9 Intelligent cross-referencing
 Package cleveref Info: `listings' support loaded on input line 2857.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks27
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
@@ -328,123 +346,108 @@ Package caption Warning: Unsupported document class (or package) detected,
 See the caption package documentation for explanation.
 
 Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
-blestring \footnotesize \begin {center}{\normalfont \footnotesize #1}\\{\normal
-font \footnotesize \scshape #2}\end {center}\@IEEEtablecaptionsepspace \else \@
-IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {
-#1.}~~ #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \
-footnotesize {#1.}~~ }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent 
-\unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfon
-t \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont 
-\footnotesize \box \@tempboxa \hfil }\fi \fi \fi .
-\c@ContinuedFloat=\count104
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi .
+\c@ContinuedFloat=\count105
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
-\c@subfigure=\count105
-\c@subtable=\count106
+\c@subfigure=\count106
+\c@subtable=\count107
 )
 (./assignment.aux)
 \openout1 = `assignment.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
+\scratchcounter=\count108
 \scratchdimen=\dimen141
 \scratchbox=\box37
-\nofMPsegments=\count108
-\nofMParguments=\count109
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count110
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count111
 \MPscratchDim=\dimen142
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
-\everyMPtoPDFconversion=\toks28
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks29
 )
-\c@lstlisting=\count113
+\c@lstlisting=\count114
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <11> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.69997> on input line 51.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.5> on input line 51.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 51.
- (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+LaTeX Font Info:    Try loading font information for U+lasy on input line 67.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <11> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+LaTeX Font Info:    Try loading font information for U+msa on input line 67.
 
-Overfull \hbox (1.8587pt too wide) in paragraph at lines 51--51
- [] 
- []
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 67.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-Overfull \hbox (1.8587pt too wide) in paragraph at lines 51--51
- [] 
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 69.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 69.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 69.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 101.
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+]
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
  \OT1/ptm/m/it/10 2) dd if=/dev/zero of=sb-io-test bs=1M count=1k
  []
 
 
-Underfull \hbox (badness 4927) in paragraph at lines 115--116
+Underfull \hbox (badness 4927) in paragraph at lines 161--162
 \OT1/ptm/m/it/10 conv=fdatasync: [][] \OT1/ptm/m/n/10 This bench-mark is used t
 o com-pute
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 127--128
+Underfull \hbox (badness 2126) in paragraph at lines 173--174
 []\OT1/ptm/m/n/10 Therefore, the com-mand \OT1/ptm/m/it/10 dd if=/dev/zero of=s
 b-io-test
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+[2]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
@@ -452,107 +455,189 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 1571) in paragraph at lines 159--162
+Underfull \hbox (badness 1571) in paragraph at lines 206--209
 \OT1/ptm/m/n/10 gen-er-ates load pat-terns, but with-out re-quir-ing a lab of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--162
+Underfull \hbox (badness 10000) in paragraph at lines 206--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \vbox (badness 8019) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
 []\OT1/ptm/m/n/10 -c client.txt : Use this as the full path
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
 \OT1/ptm/m/n/10 name of the client.txt file (the de-fault is
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1354) in paragraph at lines 221--223
+\OT1/ptm/m/n/10 sys-tem on a CIFS server will per-form when pre-sented
+ []
 
- [2]
-<plots/UnixBench.pdf, id=18, 505.89pt x 505.89pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--237
+
+ []
+
+[3] <figure1.jpg, id=20, 307.1475pt x 24.09pt>
+File: figure1.jpg Graphic file (type jpg)
+ <use figure1.jpg>
+Package pdftex.def Info: figure1.jpg used on input line 243.
+(pdftex.def)             Requested size: 199.16928pt x 15.62117pt.
+
+<figure2.jpg, id=21, 328.22626pt x 286.82156pt>
+File: figure2.jpg Graphic file (type jpg)
+ <use figure2.jpg>
+Package pdftex.def Info: figure2.jpg used on input line 249.
+(pdftex.def)             Requested size: 227.62204pt x 198.9093pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+[]\OT1/ptm/m/n/10 NTCreateX, Qpathinfo (Query-PathInfo), Qfile-info
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 265--266
+\OT1/ptm/m/n/10 re-quest re-sponse per-for-mance. Once built, two bi-na-ries
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
+
+ []
+
+<figure4.jpg, id=22, 531.48563pt x 101.62968pt>
+File: figure4.jpg Graphic file (type jpg)
+ <use figure4.jpg>
+Package pdftex.def Info: figure4.jpg used on input line 275.
+(pdftex.def)             Requested size: 284.52756pt x 54.40778pt.
+
+Overfull \hbox (32.52756pt too wide) in paragraph at lines 275--276
+ [][] 
+ []
+
+[4 <./figure1.jpg> <./figure2.jpg> <./figure4.jpg>]
+<plots/UnixBench.pdf, id=26, 505.89pt x 505.89pt>
 File: plots/UnixBench.pdf Graphic file (type pdf)
  <use plots/UnixBench.pdf>
-Package pdftex.def Info: plots/UnixBench.pdf used on input line 196.
+Package pdftex.def Info: plots/UnixBench.pdf used on input line 308.
 (pdftex.def)             Requested size: 258.0pt x 258.00047pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 196--197
+Overfull \hbox (6.0pt too wide) in paragraph at lines 308--309
 [][] 
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 201--202
+Underfull \hbox (badness 1484) in paragraph at lines 313--314
 []\OT1/ptm/m/n/10 As high-lighted by Fig-ure 1[]. The min-i-mum value of
  []
 
-<plots/dd.pdf, id=19, 505.89pt x 505.89pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
+
+ []
+
+<plots/dd.pdf, id=27, 505.89pt x 505.89pt>
 File: plots/dd.pdf Graphic file (type pdf)
  <use plots/dd.pdf>
-Package pdftex.def Info: plots/dd.pdf used on input line 216.
+Package pdftex.def Info: plots/dd.pdf used on input line 346.
 (pdftex.def)             Requested size: 258.0pt x 258.00047pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 216--217
+Overfull \hbox (6.0pt too wide) in paragraph at lines 346--347
 [][] 
  []
 
+[5 <./plots/UnixBench.pdf>]
+Underfull \hbox (badness 1448) in paragraph at lines 371--371
+\OT1/ptm/m/it/10 All the in-stances pro-vide ap-prox-i-mately the same IO
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3 <./plots/UnixBench.pdf> <./plots/dd.pdf>]
-<plots/iopingMin.pdf, id=35, 505.89pt x 505.89pt>
-File: plots/iopingMin.pdf Graphic file (type pdf)
- <use plots/iopingMin.pdf>
-Package pdftex.def Info: plots/iopingMin.pdf used on input line 237.
-(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 
-<plots/iopingAvr.pdf, id=36, 505.89pt x 505.89pt>
+ []
+
+<plots/iopingAvr.pdf, id=37, 505.89pt x 505.89pt>
 File: plots/iopingAvr.pdf Graphic file (type pdf)
  <use plots/iopingAvr.pdf>
-Package pdftex.def Info: plots/iopingAvr.pdf used on input line 242.
-(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+Package pdftex.def Info: plots/iopingAvr.pdf used on input line 381.
+(pdftex.def)             Requested size: 258.0pt x 258.00047pt.
 
-<plots/iopingMax.pdf, id=37, 505.89pt x 505.89pt>
-File: plots/iopingMax.pdf Graphic file (type pdf)
- <use plots/iopingMax.pdf>
-Package pdftex.def Info: plots/iopingMax.pdf used on input line 247.
-(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
+Overfull \hbox (6.0pt too wide) in paragraph at lines 381--382
+[][] 
+ []
 
-<plots/iopingMdev.pdf, id=38, 505.89pt x 505.89pt>
-File: plots/iopingMdev.pdf Graphic file (type pdf)
- <use plots/iopingMdev.pdf>
-Package pdftex.def Info: plots/iopingMdev.pdf used on input line 252.
-(pdftex.def)             Requested size: 123.84283pt x 123.83992pt.
 
-<plots/dbench2.pdf, id=39, 505.89pt x 505.89pt>
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
+
+ []
+
+<plots/dbench2.pdf, id=38, 505.89pt x 505.89pt>
 File: plots/dbench2.pdf Graphic file (type pdf)
  <use plots/dbench2.pdf>
-Package pdftex.def Info: plots/dbench2.pdf used on input line 373.
+Package pdftex.def Info: plots/dbench2.pdf used on input line 415.
 (pdftex.def)             Requested size: 258.0pt x 258.00047pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 373--374
+Overfull \hbox (6.0pt too wide) in paragraph at lines 415--416
 [][] 
  []
 
-[4] <plots/Dbench10.pdf, id=43, 505.89pt x 505.89pt>
-File: plots/Dbench10.pdf Graphic file (type pdf)
- <use plots/Dbench10.pdf>
-Package pdftex.def Info: plots/Dbench10.pdf used on input line 411.
+[6 <./plots/dd.pdf> <./plots/iopingAvr.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 438--438
+
+ []
+
+<plots/netperf.pdf, id=54, 505.89pt x 505.89pt>
+File: plots/netperf.pdf Graphic file (type pdf)
+ <use plots/netperf.pdf>
+Package pdftex.def Info: plots/netperf.pdf used on input line 455.
 (pdftex.def)             Requested size: 258.0pt x 258.00047pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 411--412
+Overfull \hbox (6.0pt too wide) in paragraph at lines 455--456
 [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 472--472
+
+ []
+
+[7 <./plots/dbench2.pdf> <./plots/netperf.pdf>]
+Underfull \hbox (badness 1762) in paragraph at lines 482--483
+[]\OT1/ptm/m/it/10 t2.micro \OT1/ptm/m/n/10 pro-vides the low-est per-for-mance
+s ex-cept for
+ []
+
+(./assignment.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+[]\OT1/ptm/m/n/8 ``http://docs.aws.amazon.com/awsec2/latest/userguide/instance-
+
+ []
 
 
-No file assignment.bbl.
+Overfull \hbox (32.5174pt too wide) in paragraph at lines 31--32
+[]\OT1/ptm/m/n/8 ``http://www.phoronix.com/scan.php?page=article&item=amazon[]e
+c2[]c3&num=1.'' 
+ []
+
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -565,38 +650,31 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
+Overfull \vbox (1.47389pt too high) has occurred while \output is active []
 
-[5 <./plots/iopingMin.pdf> <./plots/iopingAvr.pdf> <./plots/iopingMax.pdf> <./p
-lots/iopingMdev.pdf> <./plots/dbench2.pdf> <./plots/Dbench10.pdf>]
-(./assignment.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[8] (./assignment.aux) ) 
 Here is how much of TeX's memory you used:
- 7208 strings out of 493315
- 121731 string characters out of 6137904
- 220966 words of memory out of 5000000
- 10554 multiletter control sequences out of 15000+600000
- 40269 words of font info for 76 fonts, out of 8000000 for 9000
+ 7479 strings out of 493315
+ 124805 string characters out of 6137904
+ 215769 words of memory out of 5000000
+ 10794 multiletter control sequences out of 15000+600000
+ 41675 words of font info for 90 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,10n,38p,727b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-d
-ist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on assignment.pdf (5 pages, 152747 bytes).
+ 42i,9n,38p,907b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/bas
+e/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on assignment.pdf (8 pages, 261293 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

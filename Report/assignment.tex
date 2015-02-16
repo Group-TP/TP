@@ -25,6 +25,9 @@
 \widowpenalty = 10000
 \displaywidowpenalty = 10000
 \usepackage{cleveref}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{caption}
@@ -34,18 +37,10 @@
 \makeatletter
 \renewcommand{\paragraph}[1]{\noindent\textsf{#1}.}
 
-\title{Our Title}
-\author{Mika V. M\"antyl\"a$^{1}$, Foutse Khomh$^{2}$, Bram Adams$^{2}$, Emelie Engstr\"om$^{3}$, Kai Petersen$^{4}$
+\title{Cloud Computing Performances on Amazon EC2 Instances}
+\author{Azadeh Kermansaravi, Mohammed Sayagh
     \\
-    \emph{$^{1}$ Dep. of Computer Science and Engineering, Aalto University, Finland}
-    \\
-    \emph{$^{2}$ SWAT--MCIS, \'{E}cole Polytechnique de Montr\'{e}al, Qu\'{e}bec, Canada}
-    \\
-    \emph{$^{3}$ Dep. of Computer Science, Lund University, Sweden}
-    \\
-    \emph{$^{4}$ School of Computing, Blekinge Institute of Technology, Sweden}
-    \\
-    \emph{mika.mantyla@aalto.fi, \{foutse.khomh, bram.adams\}@polymtl.ca, emelie.engstr\"om@cs.lth.se, kai.petersen@bth.se }}
+    \emph{azadeh.kermansaravi, mohammed.sayagh}@polymtl.ca}
 
 \begin{document}
 \maketitle
@@ -57,32 +52,84 @@ One of the most important challenges to migrate software application to Cloud is
 \section{Introduction}
 \label{sec:introduction}
 
-Quisque a dignissim purus. Vivamus ut ultrices orci, ac tincidunt magna. Mauris lacinia feugiat dignissim. Donec congue mi risus, in cursus eros adipiscing eu. Proin cursus nulla et sapien vulputate feugiat. Mauris vehicula consectetur ipsum non lobortis. Nunc nec eros fermentum, suscipit purus nec, sagittis metus. Sed vulputate nisl in dapibus condimentum. Aliquam erat volutpat. Proin vitae aliquet ante. Maecenas vulputate nisl ac tellus volutpat, vel pulvinar risus tincidunt. In hac habitasse platea dictumst. Etiam tincidunt sit amet turpis aliquet tristique.
 
-\section{Background and Related Work}
+\indent Cloud computing is a general term for the delivery of hosted services over the Internet. It means that instead of all the computer hardware and software you're using sitting on your desktop, or somewhere inside your company's network, it's provided for you as a service by another company and accessed over the Internet, usually in a completely seamless way. It is just somewhere up in the nebulous "cloud" that the Internet represents. Cloud computing is a word that means different things to different people which promises several attractive benefits for businesses and end users such as Self-service provisioning, Elasticity and Pay per use.\\
+\indent Nowadays, “Cloud Computing” is most discussed term in business and academic environment. Because of the increasing popularity, many giant IT companies such as Microsoft, IBM, Google and Amazon interest Cloud Computing. Many managers in small business and academicians in universities are not aware of benefits and characteristic of minimizing the cost of cloud computing. IT companies are eager to encourage educational adoption of cloud computing; for example, Google has designed cloud based GoogleApps for educational usage, and another example, IBM launched IBM Cloud Academy that provides a global forum for educators, researchers and IT professionals from education industry to pursue cloud computing initiatives, develop skills and share best practices to reduce operating costs while improving quality and access to education.\\
+\indent Due to significant and daily increase in cloud computing development, some important challenges in the field are as follows: Optimized server utilization, Cost saving, Dynamic scalability, Shortening development life cycle, Reducing time for implementation, Data location, Cloud security policy/procedures transparency and Disaster recovery.\\
+\indent In this regard, we perform a through analysis to propose which instance could be used for associated application.
+
+\section{Background}
 \label{sec:backgr-relat-work}
 
 \subsection{Instances}
-
 \begin{table*}
 \begin{center}
-\begin{tabular}{|l|l|l|l|l|l|}
+\begin{tabular}{|l|l| }
   \hline
-  Instance type & \# virtual CPU & Memory (GiB) & Instance storage & EBS-Optimized Available & Network performance \\
+  Instance Family & Current Generation Instance Types \\
   \hline
-  t2.micro & 1 & 1 & EBS Only & No & Low to moderate \\
-  t2.small & 1 & 2 & EBS Only & No & Low to moderate \\
-  t2.medium & 2 & 4 & EBS Only & No & Low to moderate \\
-  c3.large & 2 & 3.75 & 2 x 16 (SSD) & No & Moderate \\
-  c3.xlarge & 4 & 7.5 & 2 x 40 (SSD) & Yes & Moderate \\
-   \hline
+  General Purpose & t2.micro, t2.small, t2.medium,  m3.medium, m3.large, m3.xlarge, m3.2xlarge \\
+  Compute optimized &  c4.large, c4.xlarge, c4.2xlarge, c4.4xlarge, c4.8xlarge, c3.large,  c3.xlarge, c3.2xlarge, c3.4xlarge, c3.8xlarge\\
+  Memory optimized & r3.large, r3.xlarge, r3.2xlarge, r3.4xlarge, r3.8xlarge \\
+  Storage optimized & i2.xlarge, i2.2xlarge, i2.4xlarge, i2.8xlarge, hs1.8xlarge \\
+  GPU instances & g2.2xlarge \\
+  \hline
 \end{tabular}
-\caption{\label{table:instances} Characteristics of each instance of our case study}
+\caption{\label{table:instancess} Current Generation Instances}
 \end{center}
 \end{table*}
 
 
-We have used in our case study five different instances based on Ubuntu. The Table \ref{table:instances} provides their differences 
+We have used five different instances in our case study based on Ubuntu includes t2.micro, t2.small, t2.medium, c3.large and c3.xlarge. When you launch an instance, the instance type that you specify determines the hardware of the host computer used for your instance. Each instance type offers different compute, memory, and storage capabilities. Amazon EC2 provides each instance with a consistent and predictable amount of CPU capacity, regardless of its underlying hardware. Amazon EC2 provides the current and previous generation instance types listed in the table \ref{table:instancess}.  
+
+T2 instances are designed to provide moderate baseline performance and the capability to burst to significantly higher performance as required by your workload. They are intended for workloads that don't use the full CPU often or consistently, but occasionally need to burst. 
+Each T2 instance receives CP Credits continuously at a set rate depending on the instance size.  The t2.micro and t2.small instance types launch with an initial balance of 30 CPU credits, and the t2.medium instance type launches with 60 CPU credits. This initial credit balance is designed to provide a good startup experience. The maximum credit balance for an instance is equal to the number of CPU credits received per hour times 24 hours. For example, a t2.micro instance earns 6 CPU credits per hour and can accumulate a maximum CPU credit balance of 144 CPU credits
+T2 instances are well suited for general purpose workloads, such as web servers, developer environments, and small databases. T2 instances are currently available in three instance sizes: t2.micro, t2.small, and t2.medium. Customers can launch T2 instances using the AWS management console, Amazon EC2 command line interface, and the AWS SDKs. 
+
+Features:
+
+\begin{itemize}
+
+\item High Frequency Intel Xeon Processors operating at 2.5GHz with Turbo up to 3.3GHz
+\item Burstable CPU, governed by CPU Credits, and consistent baseline performance
+\item Lowest-cost general purpose instance type, and Free Tier eligible (t2.micro only)
+\item Balance of compute, memory, and network resources
+
+\end{itemize}
+
+Use Cases: Development environments, build servers, code repositories, low-traffic web applications, early product experiments, small databases.  
+
+The C3 instance types deliver their highest processor performance in Amazon's cloud. The C3 instances are backed by Intel Xeon E5 "Ivy Bridge" processors, use SSD-based storage, support AVX and Turbo as part of the Ivy Bridge feature set, and also deliver on improved network performance in the cloud. Amazon also announced new I/O-focused instance types last week too, but of most interest to us at Phoronix are the C3 instance types for compute-intensive workloads. Over the conventional C1 instances, the C3 instances use the faster Intel Ivy Bridge processors and double the memory per vCPU and use solid-state storage. 
+Features:
+\begin{itemize}
+
+\item High Frequency Intel Xeon E5-2680 v2 (Ivy Bridge) Processors
+\item Support for Enhanced Networking
+\item Support for clustering
+\item SSD-backed instance storage
+
+\end{itemize}
+Use Cases: High performance front-end fleets, web-servers, batch processing, distributed analytics, high performance science and engineering applications, ad serving, MMO gaming, video-encoding, and distributed analytics \cite{ref1} \cite{ref2}. 
+
+
+Table \ref{table:instancess} provides their differences, besides, Table \ref{table:price} shows the difference between the price of each instance type \cite{ref3} \cite{ref4}. 
+
+\begin{table*}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+  \hline
+  API Name & Memory & Compute Unite & Cores & Storage & Arch & I/O Performance & Linux cost & Windows cost \\
+  \hline
+  t2.micro & 1.0 GB & 1 units(Burstable) & 1 cors & 0GB (EBS only) & 32/64-bit & Low to Moderate & \$0.013 h* & \$0.018 h\\
+  t2.small & 2.0 GB & 1 units(Burstable) & 1 cors & 0GB (EBS only) & 32/64-bit & Low to Moderate & \$0.026 h & \$0.036 h\\
+  t2.medium & 4.0 GB & 2 units(Burstable) & 2 cors & 0GB (EBS only) & 64-bit & Low to Moderate & \$0.052 h & \$0.072 h\\
+  c3.large & 3.75 GB & 7 units & 2 cors & 32GB (SSD) & 64-bit & Moderate & \$0.105 h& \$0.188 h\\
+  c3.xlarge & 7.5 GB & 14 units & 4 cors & 80GB (SSD) & 64-bit & Moderate/500Mbps & \$0.210 h & \$0.376 h\\
+   \hline
+\end{tabular}
+\caption{\label{table:price} compare EC2 instances using Amazon's instance type and pricing pages, *per hour}
+\end{center}
+\end{table*}
 
 
 
@@ -104,9 +151,8 @@ UnixBench is a benchmark used to evaluate the general performances of a server, 
 \item Execl Throughput: This test aims at measuring the number of call \textit{execl} that could be done by second.
 \item Pipe Throughput: This test aims at evaluating the pipes' bandwidth, a process read or write on a pipe.
 \item Pipe-based Context Switching: This test aims at measuring the communication between process.
-\item Process Creation: 
+\item Process Creation: This test aims at measuring the creation of a process
 \item Shell Scripts: It represents the execution time of a script by simulating the common operations. 
-\item System Call Overhead: 
 
 \end{itemize}
 
@@ -155,6 +201,7 @@ It is possible to push multiple elements using a single command call just specif
 \item MSET:  MSET replaces existing values with new values, just as regular SET. See MSETNX if you don't want to overwrite existing values. MSET is atomic, so all given keys are set at once. It is not possible for clients to see that some of the keys were updated while others are unchanged.
 \end{itemize}
 
+
 \subsubsection{Dbench}
 \indent Dbench is a Filesystem benchmark which generates load patterns, but without requiring a lab of Windows load generators to run. It is used to calculate the performance of Disk and Network Troughput. Dbench is a utility to benchmark a system based on client workload profiles.\\
 \indent Dbench takes only one parameter on the command line, which is the number of processes (clients) to start. Issuing the command “dbench 30” for example, creates 30 parallel processes of dbench. All processes are started at the same time and each of them runs the same workload. The workload for each dbench process is specified by a client.txt configuration file in the working (testing) directory. It consists of a mixture of file system operations executed by each dbench process. dbench runs with n parallel processes and delivers only one value as a result. The resulting value is an average throughput of the file system operations described in client.txt and measured in megabytes per second.\\
@@ -171,6 +218,66 @@ It is possible to push multiple elements using a single command call just specif
 \item -T option[,...]: This sets the socket options for the connection to the server. 
 \end{itemize}
 
+\indent dbench allows you to get a feel for how well the file system on a CIFS server will perform when presented with the NetBench workload. The Common Internet File System (CIFS) is a file sharing protocol. Client systems use this protocol to request file access services from server systems over a network. It is based on the Server Message Block protocol widely in use by personal computers and workstations running a wide variety of operating systems. \\
+\indent There are two benchmark description files. One called $client-plain.txt$, the other called $client-oplocks.txt$.  Each of these consists of a series of lines, one for each operation that the file describes. Each operation contains information about all the relevant parameters needed by each operation. Both files contain only the following 13 operations.\\
+
+\indent Close\\
+\indent Deltree\\
+\indent Flush\\
+\indent NTCreateX\\
+\indent QUERY FILE INFORMATION\\
+\indent QUERY FS INFORMATION\\
+\indent QUERY PATH INFORMATION\\
+\indent ReadX\\
+\indent Rename\\
+\indent mkdir\\
+\indent Unlink\\
+\indent WriteX\\
+\indent ...\\
+
+\indent This is a relatively small number of operations. There are no Oplock specific operations in the mix because the Netbench benchmark only causes self-breaks, which are all handled transparently by libsmb. It is clear that with oplocks enabled on the server, many fewer operations result, and the client is able to satisfy many requests from the local cache.\\
+\indent The format of each line is relatively simple. The following is an example: 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=7cm]{figure1.jpg}
+\end{figure} 
+
+\indent This specifies that the CIFS op to be made is an NTCreateX request. The following table summarizes the occurrence of each operation within each benchmark trace:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm]{figure2.jpg}
+\end{figure} 
+
+\begin{itemize}
+\item  NTCreateX, Qpathinfo (QueryPathInfo), Qfileinfo (QueryFileInfo), Sfileinfo(SetPathInfo) are  kind of a file create operations. 
+\item ReadX, WriteX, Flush, close are the file operations which read the file, write on the file and close the file.
+\item  Deltree is used to remove a directory with all of its subdirectories and files, uses the deltree EXEC command. 
+\item Mkdir is used to create a directory. 
+\item Rename operation, renames a file on a WAAS device.
+\item When a file is created, it is given a link count of one. As you add and remove links to the file, this link count is incremented and decremented.  Unlink is used to remove the links.  
+\end{itemize}
+
+\indent The output is very simple: just a list of the MB/s achieved by the run.
+
+
+\subsubsection{netpref}
+\indent Netperf is a software application that provides network bandwidth testing between two hosts on a network. It supports Unix domain sockets, TCP, SCTP, DLPI and UDP via BSD Sockets. Netperf provides a number of predefined tests e.g. to measure bulk (unidirectional) data transfer or request response performance. Once built, two binaries (netserver and netperf) and a bunch of scripts are noted. The scripts are great for generating a whole suite of tests at once, and they also serve as good examples of some of the many command line arguments netperf takes. Visiting the remote system and starting up a netserver (daemon) on the considered port or some other make some results like Figure 1:\\
+
+\$netserver\\
+\indent Starting netserver at port 127.0.0.1\\
+
+This daemon will typically run until killed (like the lmbench daemon, unlike the netpipe daemon). Multiple tests can be run to the target host once the daemon is running.
+
+Then return to your source host and run netpipe as shown in Figure 1:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{figure4.jpg}
+\end{figure} 
+
+This particular invocation says to test for 10 seconds continuously, sending a TCP stream of data to the target 127.0.0.1 with a message size of 16384 (recall, the largest message that will fit in an MTU) using a large send and receive buffer (87380, 16384) on both ends which results the troughput equal to 34360.82 bit/sec. Many other options are possible -- netperf is a powerful command with many distinct ways of running. 
+
+
 
 \section{Approach}
 \label{sec:approach}
@@ -179,9 +286,14 @@ In this section, we provide the approach used to extract data. While the first s
 
 We have created the first instance of type \textit{t2.micro}, we have also created a script to compute data. Therefore, to create another instance, we have used the image of the first one. Hence, we have created the types of instances consisting of \textit{t2.small}, \textit{t2.medium}, \textit{c3.large}, and \textit{c3.xlarge}.
 
-To compute data, we have used the benchmarks described above. Since the performance of Cloud instances change over time, because there are many instances deployed in the same hardware, we execute each one five times.
+While each instance depends on where it is deployed, which could impact its performance, we have created five instances for each instance type. For example, we have created five instances for the instance type \textit{t2.micro}.
 
-We have extracted data in csv form, as described in the Figure .... .  
+
+To compute data, we have used the benchmarks described above. Since the performance of Cloud instances change over time, because there are many instances deployed in the same infrastructure, we execute each benchmark five times.
+
+While we have five instances type, 5 instances for each type, and five execution for each benchmark. The number of executions is 125.
+
+To analyze the results, we have used boxplots to show the difference between instances. Moreover, to understand the results, we have used the detailed information of each benchmark output, and the characteristics of each instance type.
 
 \section{Results}
 \label{sec:results}
@@ -190,11 +302,11 @@ In this section, we provide the benchmarks results.
 
 \subsection{CPU performances}
 
-\textbf{Results. The averages of UnixBensh results for each instance are: 1952.12 for the instance \textit{t2.micro}, 1800.18 for the instance \textit{t2.small}, 2660.04 for the instance \textit{t2.medium}, 2269.7 for the instance \textit{c3.large}, and 3273.46 for the instance \textit{c3.xlarge}}.
+\textbf{Results. The averages of UnixBensh results for each instance are: 600.628 for the instance \textit{t2.micro}, 1482.136 for the instance \textit{t2.small}, 2705.132 for the instance \textit{t2.medium}, 2255.052 for the instance \textit{c3.large}, and 3282.676 for the instance \textit{c3.xlarge}}.
 
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{plots/UnixBench.pdf}
-\caption{UnixBench results}
+\caption{CPU benchmark results}
 \label{fig:UnixBenchResult}
 \end{figure}
 
@@ -202,13 +314,31 @@ As highlighted by Figure \ref{fig:UnixBenchResult}. The minimum value of \textit
 
 The smallest value of \textit{UnixBench} benchmark is provided by the instance \textit{t2.small}, and the maximum is provided by the instance \textit{c3.xlarge}.
 
-As provided by Figure \ref{fig:UnixBenchResult}, the order of instances by the \textit{UnixBench} benchmark is as follow: \textit{t2.small, t2.micro, c3.large, t2.medium, c3.xlarge}.
+As provided by Figure \ref{fig:UnixBenchResult}, the order of instances by the \textit{UnixBench} benchmark is as follow: \textit{t2.micro, t2.small, c3.large, t2.medium, c3.xlarge}.
 
 \textbf{Discussion}. We observe that we have three categories of instances in Figure \ref{fig:UnixBenchResult}. We can classify the instances in three main clusters. While the first one is represented by the instances \textit{t2.micro} and \textit{t2.small}, which have one virtual processor. The second category is presented by \textit{t2.medium} and \textit{c3.large}, which contains two virtual processor. The third category contains the instance \textit{c3.xlarge}, it contains 4 virtual CPU. Hence, the difference between the three category is due to the number of virtual processor.
 
 Moreover, There is a difference between the instances \textit{t2.micro} and \textit{t2.small}. By analyzing the benchmark results, we have found that the main difference is in the test \textit{File Copy 4096 bufsize 8000 maxblocks}, which consists of copying a large size, which gives the important different score (around 5910.3 for the instance \textit{t2.micro} and 4998.4 for the instance \textit{t2.small}). 
 
-The difference between \textit{t2.medium} and \textit{c3.large} is principally due to the test \textit{Dhrystone 2 using register variables}. It tests the operations on the strings. In this test, \textit{t2.medium} has a score of 5449.3, whereas \textit{c3.large} has a score of 3408.7.
+The main difference between \textit{t2.medium} and \textit{c3.large} is principally due to the test \textit{Dhrystone 2 using register variables}, which tests the operations on the strings. Hence, \textit{t2.medium} has a better CPU performance than \textit{c3.large}, especially on the operations on the strings.
+
+
+\
+
+\noindent\fbox{%
+    \parbox{8.5cm}{
+	\textit{\newline
+	The instance providing the highest CPU performance is \textit{c3.xlarge}.
+	\\
+	The instance providing the lowest CPU performance is \textit{t2.micro}.
+\newline
+	} 
+    } \par
+}
+
+\
+
+\
 
 \subsection{IO performances}
 
@@ -218,155 +348,67 @@ The difference between \textit{t2.medium} and \textit{c3.large} is principally d
 \label{fig:ddResult}
 \end{figure}
 
-\textbf{Results. The averages of IO Benchmark results for each instance are: 62.68 for the instance \textit{t2.micro}, 62.7 for the instance \textit{t2.small}, 61.98 for the instance \textit{t2.medium}, 63.2 for the instance \textit{c3.large}, and 91.88 for the instance \textit{c3.xlarge}}
+\textbf{Results. The averages of IO Benchmark results for each instance are: 62.812 for the instance \textit{t2.micro}, 62.308 for the instance \textit{t2.small}, 62.152 for the instance \textit{t2.medium}, 63.2 for the instance \textit{c3.large}, and 91.72 for the instance \textit{c3.xlarge}}
 
-As highlighted by Figure \ref{fig:ddResult}. The minimum value of \textit{IO} benchmark results for the instance \textit{t2.micro} is \textit{62.1 MB/s}, whereas the maximum is \textit{63.1 MB/s}. The minimum for the instance \textit{t2.small} is \textit{62.5 MB/s} and the maximum is \textit{62.8 MB/s}. \textit{t2.medium} provides as a minimum result of the same benchmark \textit{61.8 MB/s}, where the maximum is \textit{62.3 MB/s}. The minimum value of \textit{c3.large} is \textit{62.4 MB/s} where the maximum is \textit{66.4 MB/s}. \textit{c3.xlarge} provides a minimum of \textit{87.6 MB/s} and a maximum of \textit{109 MB/s}.
+As highlighted by Figure \ref{fig:ddResult}. The minimum value of \textit{IO} benchmark results for the instance \textit{t2.micro} is \textit{62 MB/s}, whereas the maximum is \textit{63.2 MB/s}. The minimum for the instance \textit{t2.small} is \textit{56.8 MB/s} and the maximum is \textit{63 MB/s}. \textit{t2.medium} provides as a minimum result of the same benchmark \textit{61 MB/s}, where the maximum is \textit{62.4 MB/s}. The minimum value of \textit{c3.large} is \textit{62.4 MB/s} where the maximum is \textit{66.4 MB/s}. \textit{c3.xlarge} provides a minimum of \textit{87.5 MB/s} and a maximum of \textit{109 MB/s}.
 
 The smallest value of \textit{IO} benchmark is provided by the instance \textit{t2.medium}, and the maximum is provided by the instance \textit{c3.xlarge}.
 
-As provided by Figure \ref{fig:ddResult}, the order of instances by the \textit{IO} benchmark is as follow: \textit{ t2.medium, c3.large, t2.small, t2.micro, c3.xlarge}.
+As provided by Figure \ref{fig:ddResult}, \textit{t2.micro, t2.small, t2.medium, and c3.large} have approximately the same median, whereas \textit{c3.xlarge} has the higher median.
 
 
 \textbf{Discussion.} From the comparison provided in Figure \ref{fig:ddResult}, the instance \textit{c3.xlarge} has the highest speed of reading/Writing on disk. We refer these results to the I/O Performances, where the instance \textit{c3.xlarge} has "Moderate/500Mbps", and the other instances have "Low to moderate" or "Moderate".
 
+\
+
+\noindent\fbox{%
+    \parbox{8.5cm}{
+	\textit{\newline
+	All the instances provide approximately the same IO performance, except the instance \textit{c3.xlarge}, which provide the highest IO performance.
+\newline
+	} 
+    } \par
+}
+
+\
+
+\
+
 \subsection{IOPS performances}
 
 
-\begin{figure*}
-	\begin{subfigure}[b]{0.24\textwidth}
-                \includegraphics[width=\textwidth]{plots/iopingMin.pdf}
-                \caption{Min}
-                \label{fig:min}
-        \end{subfigure}
-        \begin{subfigure}[b]{0.24\textwidth}
-                \includegraphics[width=\textwidth]{plots/iopingAvr.pdf}
-                \caption{Average}
-                \label{fig:avr}
-        \end{subfigure}
-        \begin{subfigure}[b]{0.24\textwidth}
-                \includegraphics[width=\textwidth]{plots/iopingMax.pdf}
-                \caption{Max}
-                \label{fig:max}
-        \end{subfigure}
-         \begin{subfigure}[b]{0.24\textwidth}
-                \includegraphics[width=\textwidth]{plots/iopingMdev.pdf}
-                \caption{MDev}
-                \label{fig:mdev}
-        \end{subfigure}
-        \caption{\label{fig:IOPSResults} IOPS benchmark comparison of results (us)}
-\end{figure*}
-
-\begin{center}
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|}
-  \hline
-t2.micro & t2.small & t2.medium & c3.large & c3.xlarge \\
-\hline
-386 us	& 385 us & 409 us & 285 us & 242 us \\
-424 us & 394 us & 365 us & 273 us & 241 us \\
-423 us & 	364 us & 303 us & 287 us & 233 us \\
-404 us & 	394 us & 328 us & 269 us & 224 us \\
-433 us & 	380 us & 298 us & 280 us & 250 us \\
-\hline
-\end{tabular}
-\caption{\label{IOPSResultsMin} IOPS min results}
-\end{center}
-\end{table}
-\end{center}
-
-\begin{center}
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|}
-  \hline
-t2.micro & t2.small & 	t2.medium & 	c3.large & 	c3.xlarge \\
-\hline 
-469 & 	480 & 	457 & 	372 & 	336 \\
-473 & 	447 & 	475 & 	329 & 	352 \\
-515 & 	487 & 	452 & 	359 & 	357 \\
-495 & 	475 & 	518 & 	380 & 	321 \\
-500 & 	483 & 	460 & 	357 & 	312 \\
-\hline
-\end{tabular}
-\caption{\label{IOPSResultsAvr} IOPS average results}
-\end{center}
-\end{table}
-\end{center}
+\begin{figure}
+	\includegraphics[width=0.5\textwidth]{plots/iopingAvr.pdf}
+	\caption{\label{fig:IOPSResults} IOPS benchmark comparison of the average results (us)}
+\end{figure}
 
 
-\begin{center}
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|}
-  \hline
-t2.micro & t2.small & 	t2.medium & 	c3.large & 	c3.xlarge \\
-\hline 
-568	& 	620	& 	497	& 	419	& 393 \\
-532	& 	504	& 	652	& 	391	& 	453 \\
-594	& 	665	& 	559	& 	406	& 	544 \\
-615	& 	593	& 	967	& 	423	& 	379 \\
-565	& 	574	& 	592	& 	401	& 	353 \\
-\hline
-\end{tabular}
-\caption{\label{IOPSResultsMax} IOPS Max results}
-\end{center}
-\end{table}
-\end{center}
+\textbf{Results. The averages of IOPS Benchmark results for each instance are: 520.64 us for the instance \textit{t2.micro}, 468.96 us for the instance \textit{t2.small}, 464.64 us for the instance \textit{t2.medium}, 354.16 us for the instance \textit{c3.large}, and 355.84 us for the instance \textit{c3.xlarge}}.
 
+As highlighted in Figure \ref{fig:IOPSResults}, the minimum time needed for the instance \textit{t2.micro} is 463 us, whereas the maximum is 712 us. 400 us is the minimum and 502 us is the maximum for the instance \textit{t2.small}, \textit{t2.medium} provides as minimum value 368 us and 553 us as maximum value, the minimum time needed for the instance \textit{c3.large} is 302 us and the maximum is 545 us. The minimum for the instance \textit{c3.xlarge} is 310 us and the maximum is 427 us. 
 
-\begin{center}
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|}
-  \hline
-t2.micro & t2.small & 	t2.medium & 	c3.large & 	c3.xlarge \\
-\hline 
-57 &	81 &	28 &	36 &	39 \\
-33 &	43 &	84 &	32 &	50 \\
-43 &	88 &	66 &	39 &	75 \\
-57 &	58 &	165 &	43 &	39 \\
-48 &	52 &	79 &	34 &	26 \\
-\hline
-\end{tabular}
-\caption{\label{IOPSResultsMDev} IOPS MDev results}
-\end{center}
-\end{table}
-\end{center}
+As provided in Figure \ref{fig:IOPSResults}, each instance has its own median time to provide an IOPS result, while the instance providing a minimum time is the better, and the one providing the higher one is the worse. The instances are ordered from the low performed to the high performed instance as follow: \textit{c3.xlarge, c3.large, t2.medium, t2.small, and t2.micro}.
 
-\textbf{Table \ref{IOPSResultsMin}, Table \ref{IOPSResultsAvr}, Table \ref{IOPSResultsMax}, and Table \ref{IOPSResultsMDev} provide the results of the benchmark used to evalute the IOPS performance}. While we have used the benchmark ioping to evaluate the performance of IOPS of each instance, the benchmark gives four different results, the first one corresponds to minimum time in the results of one execution, which highlighted in \ref{IOPSResultsMin}. The second one corresponds to the average, provided by Table \ref{IOPSResultsAvr}. The third one represents the maximum time shown by Table \ref{IOPSResultsMax}. Whereas, the third one presented by Table \ref{IOPSResultsMDev} is MDev.
+\textbf{Discussion}. To understand the differences between the instances studied, we analyzed their storage differences. We can explain this difference, by the fact that the instance \textit{t2.micro, t2.small, and t2.medium} use only \textit{EBS} for the storage, which refers to shared disc with other machines, hence it accesses could be less performed because the same device is used by many other machines at the same time, where \textit{c3.large and c3.xlarge} use a dedicated storage device, which consists of 32 GB (2 * 16 GB SSD) for the instance \textit{c3.large} and 80 GB (2 * 40 GB SSD).
 
-As provided in Figure \ref{fig:min}, each instance has its own minimum time to provide an IOPS result, the instances are ordered as follow: \textit{c3.xlarge, c3.large, t2.medium, t2.small, and t2.micro}.
+\
 
-As provided in Figure \ref{fig:avr}, each instance has its own average time to provide an IOPS result, the instances are ordered as follow: \textit{c3.xlarge, c3.large, t2.medium, t2.small, and t2.micro}.
+\noindent\fbox{%
+    \parbox{8.5cm}{
+	\textit{\newline
+	The best instances providing the best IOPS performances are \textit{c3.large} and \textit{c3.xlarge}, while the lowest performance value is provided by the instance \textit{t2.micro}.
+\newline
+	} 
+    } \par
+}
 
-As provided in Figure \ref{fig:max}, each instance has its own maximum time to provide an IOPS result, the instances are ordered as follow: \textit{c3.xlarge, c3.large, t2.micro, t2.small, and t2.medium}. \textit{t2.micro, t2.small, and t2.medium} have approximately the same value as a mediam. 
+\
 
-As provided in Figure \ref{fig:mdev}, each instance has its own MDev value, the instances are ordered as follow: \textit{c3.xlarge, c3.large, t2.micro, t2.small, and t2.medium}.
+\
 
 \subsection{Disk performances}
 
-
-\begin{center}
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|}
-  \hline
-t2.micro & t2.small & 	t2.medium & 	c3.large & 	c3.xlarge \\
-\hline 
-196.735 &	232.123 &	255.073 &	287.458 & 354.273 \\
-196.843 &	231.064 &	259.235 &	287.348 &	350.399 \\
-197.842 &	232.38 &	256.889 &	287.161 &	353.942 \\
-197.558 &	230.762 &	255.986 &	286.702 &	353.547 \\
-196.474 &	231.347 &	255.956 &	46.8487 &	355.52 \\
-\hline
-\end{tabular}
-\caption{\label{table:DBench2Results} DBench benchmark results (MB/sec)}
-\end{center}
-\end{table}
-\end{center}
-
-\textbf{The averages of DBench results for each instance are: 197.0904 MB/sec for the instance \textit{t2.micro}, 231.5352 MB/sec for the instance \textit{t2.small}, 256.6278 MB/sec for the instance \textit{t2.medium}, 239.10354 MB/sec for the instance \textit{c3.large}, and 353.5362 MB/sec for the instance \textit{c3.xlarge}}. The results are provided in Table \ref{table:DBench2Results}
+\textbf{The averages of DBench results for each instance are: 227.66148 MB/sec for the instance \textit{t2.micro}, 229.51488 MB/sec for the instance \textit{t2.small}, 146.0973376 MB/sec for the instance \textit{t2.medium}, 280.305588 MB/sec for the instance \textit{c3.large}, and 332.16496 MB/sec for the instance \textit{c3.xlarge}}.
 
 
 \begin{figure}
@@ -375,63 +417,88 @@ t2.micro & t2.small & 	t2.medium & 	c3.large & 	c3.xlarge \\
 \label{fig:dbench2}
 \end{figure}
 
-As provided by Figure \ref{fig:dbench2}, the order of instances by the disk performance is as follow: \textit{t2.micro, t2.small, t2.medium, c3.large, and c3.xlarge}.
+As highlighted in Figure \ref{fig:dbench2}, the minimum time needed for the instance \textit{t2.micro} is 169.404 MB/s, whereas the maximum is 247.495 MB/s. 204.038 MB/s is the minimum and 253.5 MB/s is the maximum for the instance \textit{t2.small}, \textit{t2.medium} provides as minimum value 4.97754 MB/s and 272.515 MB/s as maximum value, the minimum time needed for the instance \textit{c3.large} is 46.8487 MB/s and the maximum is 315.7 MB/s. The minimum for the instance \textit{c3.xlarge} is 289.411 MB/s and the maximum is 356.324 MB/s.
+
+As provided by Figure \ref{fig:dbench2}, the order of instances by the median of the disk performance from the lowest performance to highest one is as follow: \textit{t2.micro, t2.small, t2.medium, c3.large, and c3.xlarge}.
 
 \textbf{Discussion.} The main differences between the instances \textit{t2.micro} and \textit{t2.small} are the tests \textit{Find}, which consists of finding a file in the disk. Where the second important difference we have found is the test \textit{ReadX} related to the read file operations. Moreover, the important difference between \textit{t2.small} and \textit{t2.medium} is \textit{Flush} test, which is a test related to the file operations. The same difference between \textit{t2.medium} and \textit{c3.large}. The main differences between \textit{c3.xlarge} and \textit{c3.large} are \textit{ReadX} and \textit{WriteX}, which are related to read/write on a file.
+
+
+We analyzed the \textit{t2.median} data results to understand the important difference between the minimun and the maximum value provided by the instance \textit{t2.median}, as highlighted in Figure \ref{fig:dbench2}. We observe that the first two tests provide a high results, where the three other ones provide a low performance. For example, from the five instances we analyzed for \textit{t2.median}, the two performances test results provide respectively 272.515 and 271.193 MB/s, where the three other tests provide respectively 4.98222, 4.99306, and 5.0212. The same differences between for the four \textit{t2.medium} instances. We can explain that by the fact that the performance is degraded across the execution of tests, more we execute tests on the machine, the performance decreases. Hence, the instance \textit{t2.medium} loses its performance under pressure.  
+
+\
+
+\noindent\fbox{%
+    \parbox{8.5cm}{
+	\textit{\newline
+	The best instance providing the best disk performances is \textit{c3.xlarge}, while the lowest performance value is provided by the instances  \textit{t2.micro} and \textit{t2.small}.
+\newline
+	} 
+    } \par
+}
+
+\
+
+\
 
 \subsection{Network Throughput performances}
 
 
+\textbf{Results. The averages of the throughput performances results for each instance are: 34125.6032 for the instance \textit{t2.micro}, 32274.9292 for the instance \textit{t2.small}, 43254.6048 for the instance \textit{t2.medium}, 30055.9284 for the instance \textit{c3.large}, and 42955.2664 for the instance \textit{c3.xlarge}}.
 
 
-\begin{center}
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|}
-  \hline
-t2.micro & t2.small & 	t2.medium & 	c3.large & 	c3.xlarge \\
-\hline 
-4.63978 &	368.66 &	377.072 &	455.738 &	709.535 \\
-4.86367 &	236.93 &	268.571 &	294.85 &	337.944 \\
-4.86856 &	238.627 &	266.551 &	295.228 &	342.986 \\
-4.9142 &	239.147 &	269.105 &	298.469 &	327.806 \\
-4.88602 &	234.173 &	264.574 &	300.31 &	20.7406 \\
-\hline
-\end{tabular}
-\caption{\label{table:DBench10Results} DBench benchmark results (MB/sec)}
-\end{center}
-\end{table}
-\end{center}
+As highlighted in Figure \ref{fig:netperf}, the minimum throughput for the instance \textit{t2.micro} is 32342.23 MB/s, whereas the maximum is 37792.86 MB/s. 28951.68 MB/s is the minimum and 35593.7 MB/s is the maximum for the instance \textit{t2.small}, \textit{t2.medium} provides as minimum value 41971.34 MB/s and 45802.88 MB/s as maximum value, the minimum speed for the instance \textit{c3.large} is 29365.97 MB/s and the maximum is 30693.28 MB/s. The minimum for the instance \textit{c3.xlarge} is 30394.5 MB/s and the maximum is 48512.07 MB/s.
 
-
-\textbf{The averages of DBench results for each instance are: 4.834446 for the instance \textit{t2.micro}, 263.5074 for the instance \textit{t2.small}, 289.1746 for the instance \textit{t2.medium}, 328.919 for the instance \textit{c3.large}, and 347.80232 for the instance \textit{c3.xlarge}}. The results are provided in Table \ref{table:DBench10Results}
 
 
 \begin{figure}
-\includegraphics[width=0.5\textwidth]{plots/Dbench10.pdf}
-\caption{Difference between instances in Disk performances}
-\label{fig:dbench10}
+\includegraphics[width=0.5\textwidth]{plots/netperf.pdf}
+\caption{Difference between instances in Network Throughput performances}
+\label{fig:netperf}
 \end{figure}
 
-As provided by Figure \ref{fig:dbench10}, the order of instances by the disk performance is as follow: \textit{t2.micro, t2.small, t2.medium, c3.large, and c3.xlarge}.
+As provided by Figure \ref{fig:netperf}, the order of the instances studied by the median of the throughput performance is as follow: \textit{c3.large, t2.small, t2.micro, t2.medium, and c3.xlarge}.
 
+
+\
+
+\noindent\fbox{%
+    \parbox{8.5cm}{
+	\textit{\newline
+	The best instance providing the best throughput network performances is \textit{c3.xlarge}, while the lowest performance value is provided by the instance \textit{c3.large}.
+\newline
+	} 
+    } \par
+}
+
+\
+
+\
+\nocite{*}
 
 \section{Discussion}
 \label{sec:discussion}
 
+\textit{t2.micro} provides the lowest performances except for throughput performances. It could be used in for a simple application that don't need any important performances. However, it provides an acceptable network throughput, which is higher than the instance \textit{t2.medium} and \textit{c3.large}.
 
+The performance of the instance \textit{t2.small} is more important than the performance of the instance \textit{t2.micro}, except for network throughput and disk performances. 
 
+\textit{t2.medium} takes the third importance in IO, IOPS, and disk performances, and the second place for network throughput and CPU performances.
 
-\section{Comparison of Results}
-\label{sec:comparison-results}
+\textit{c3.large} has good performances except network throughput. 
+
+\textit{c3.xlarge} is the best instance in all the performances. However, it has approximately the same IOPS performances as the instance \textit{c3.large}.
+
+The best instance to deploy software applications needing CPU performances, the best instance is \textit{c3.xlarge}, and \textit{t2.medium} comes in the second level. Moreover, the best instance that could be used by software applications that need IO performances is \textit{c3.xlarge}, while the other instances have the same low performances. Furthermore, \textit{c3.large} and \textit{c3.xlarge} can be used for the software applications needing a good IOPS performances. The instance \textit{c3.xlarge} is the more recommend instance for the application having many operations in disk. For the applications using more network could use at the first choice \textit{c3.xlarge} and at the second one \textit{t2.medium}.
+
 
 \section{Conclusion}
 \label{sec:conclusion}
 
-\section*{Acknowledgment}
-TODO
 
 \balance
 \bibliographystyle{IEEEtran}
 \bibliography{assignment.bib}
+
+
 \end{document}
