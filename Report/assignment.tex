@@ -80,7 +80,7 @@ One of the most important challenges to migrate software application to Cloud is
 \end{table*}
 
 
-We have used five different instances in our case study based on Ubuntu includes t2.micro, t2.small, t2.medium, c3.large and c3.xlarge. When you launch an instance, the instance type that you specify determines the hardware of the host computer used for your instance. Each instance type offers different compute, memory, and storage capabilities. Amazon EC2 provides each instance with a consistent and predictable amount of CPU capacity, regardless of its underlying hardware. Amazon EC2 provides the current and previous generation instance types listed in the table \ref{table:instancess}.  
+We have used five different instances in our case study based on Ubuntu includes t2.micro, t2.small, t2.medium, c3.large and c3.xlarge. When you launch an instance, the instance type that you specify determines the hardware of the host computer used for your instance. Each instance type offers different compute, memory, and storage capabilities. Amazon EC2 provides each instance with a consistent and predictable amount of CPU capacity, regardless of its underlying hardware. Amazon EC2 provides the current and previous generation instance types listed in Table \ref{table:instancess}.  
 
 T2 instances are designed to provide moderate baseline performance and the capability to burst to significantly higher performance as required by your workload. They are intended for workloads that don't use the full CPU often or consistently, but occasionally need to burst. 
 Each T2 instance receives CP Credits continuously at a set rate depending on the instance size.  The t2.micro and t2.small instance types launch with an initial balance of 30 CPU credits, and the t2.medium instance type launches with 60 CPU credits. This initial credit balance is designed to provide a good startup experience. The maximum credit balance for an instance is equal to the number of CPU credits received per hour times 24 hours. For example, a t2.micro instance earns 6 CPU credits per hour and can accumulate a maximum CPU credit balance of 144 CPU credits
@@ -491,6 +491,13 @@ The performance of the instance \textit{t2.small} is more important than the per
 
 The best instance to deploy software applications needing CPU performances, the best instance is \textit{c3.xlarge}, and \textit{t2.medium} comes in the second level. Moreover, the best instance that could be used by software applications that need IO performances is \textit{c3.xlarge}, while the other instances have the same low performances. Furthermore, \textit{c3.large} and \textit{c3.xlarge} can be used for the software applications needing a good IOPS performances. The instance \textit{c3.xlarge} is the more recommend instance for the application having many operations in disk. For the applications using more network could use at the first choice \textit{c3.xlarge} and at the second one \textit{t2.medium}.
 
+Table \ref{table:price} presents a comparison between used instances based on numerous characteristics including memory, compute unit, storage (size and speed), I/O performance and their prices on Linux and Windows operating systems.
+
+Generally, instances with high memory, and high cpu but less price is more important than the others. Specifically, with the same RAM, if there is more compute unit, having less cost is really valuable.
+
+As mentioned in the table, t2.micro and t2.small considering its price can be really useful for the applications which needs less Memory and Compute Unit, it is the same for other instances, but it totally depends on what we need. 
+
+For example, c3.large and c3.xlarge are very useful for the applications in which the Memory and Compute Unit are more important than the cost problem.
 
 \section{Conclusion}
 \label{sec:conclusion}
